@@ -24,7 +24,8 @@ def palette():
     pal = []
     div = []
     x = [pal.append(f'{rgb_to_hex(i)}') for i in palette]
-    x = [div.append(f'color{rgb_to_hex(i)}') for i in palette]
+    x = [div.append([(f'color{rgb_to_hex(i)}'),(f'#{rgb_to_hex(i)}')]) for i in palette]
+    print(div)
     with open('./static/masterpalette/palette.css', 'w') as file:
         for i in pal:
             file.write('div.color' + i + '{\n\tbackground-color: #' + i + ';\n\tcolor:#' + i + '}\n')
@@ -34,5 +35,5 @@ def palette():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
     pass
