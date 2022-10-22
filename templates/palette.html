@@ -16,23 +16,14 @@
 <body class="gradient2">
 
 
-<!-- <div class="container">
-    {% for i in palette %}
-        <div class="{{ i }}">
-            <h1 class="palletemargin">{{ i }}</h1>
-        </div>
-    {% endfor %}
-</div> -->
 <div class="contaner center-text mymargin">
     <h3>Here is your pallet</h3>
 </div>
 <div class="card text-bg-dark mb-3 card palettemargin" style="max-width: 18rem;">
     {% for i in palette %}
     <div class="container {{ i[0] }} feature">
-        <!-- <div class="card-header">{{ i }}</div> -->
         <div class="card-body">
         <h6 class="card-title">{{ i[1] }}</h6>
-        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
     </div>
     {% endfor %}
